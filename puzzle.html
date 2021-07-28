@@ -1,17 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>SUSUN NUSANTARA PUZZLE GAME</title>
-    <link rel="icon" href="images/icon.png">
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/image-puzzle.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/style_popup.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/image-puzzle.js"></script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dmsridho.github.io/suntarapuzzle.github.io/" />
+    <meta property="og:title" content="SUSUN NUSANTARA PUZZLE GAME" />
+    <meta property="og:description"
+        content="Susun Nusantara Puzzle Game merupakan sebuah Permaian Puzzle yang mengangkat Tema Sejarah dan Kebudayaan Indonesia." />
+    <meta property="og:image" content="assets/images/home/bg.webp" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dmsridho.github.io/suntarapuzzle.github.io/" />
+    <meta property="twitter:title" content="SUSUN NUSANTARA PUZZLE GAME" />
+    <meta property="twitter:description"
+        content="Susun Nusantara Puzzle Game merupakan sebuah Permaian Puzzle yang mengangkat Tema Sejarah dan Kebudayaan Indonesia." />
+    <meta property="twitter:image" content="assets/images/home/bg.webp" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-puzzle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/image-puzzle.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-popup.css">
+    <link rel="icon" href="assets/images/home/icon.webp" />
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/image-puzzle.js"></script>
 </head>
 
 <body>
@@ -47,17 +62,19 @@
         </div>
         <div id="gameOver" style="display:none;">
             <div style="background-color: white; padding: 5px 10px 20px 10px; text-align: center; border-radius: 5px; ">
-                <h2 style="text-align:center">Wah Kamu Hebat!</h2>
-                Selamat :D <br /> Kamu telah menyelesaikan Puzzle !!!
+                <h2 style="text-align:center">Wah Kamu Hebat 👏 </h2>
+                Selamat 😄 <br /> Kamu telah menyelesaikan Puzzle
                 <br />
-                Langkah: <span class="stepCount">0</span> langkah
+                dengan <b><span class="stepCount">0</span> langkah</b>
                 <br />
-                Waktu: <span class="timeCount">0</span> detik
+                dan dalam waktu <b><span class="timeCount">0</span> detik</b>
                 <div>
-                    <button style="margin-top: 15px;" type="button" onclick="window.location.reload(true);">Main Lagi Yuk !</button>
+                    <button style="margin-top: 15px;" type="button" onclick="window.location.reload(true);">Main lagi,
+                        yuk?</button>
                 </div>
                 <div>
-                    <a href="../index.html"><button style="margin-top: 5px;" type="button">Kembali Ke Beranda</button></a>
+                    <a href="index.html"><button style="margin-top: 5px;" type="button">Kembali ke
+                            Beranda</button></a>
                 </div>
             </div>
         </div>
@@ -69,14 +86,14 @@
             });
 
             var images = [
-                { src: 'images/soekarno.jpeg' },
-                { src: 'images/jokowow.jpeg' },
-                { src: 'images/sby.jpg' },
-                { src: 'images/bungtomo.jpg' },
-                { src: 'images/hatta.jpg' },
-                { src: 'images/yani.jpg' },
-                { src: 'images/reog.jpg' },
-                { src: 'images/saman.jpg' },
+                { src: 'assets/images/puzzle/soekarno.webp' },
+                { src: 'assets/images/puzzle/jokowow.webp' },
+                { src: 'assets/images/puzzle/sby.jpg' },
+                { src: 'assets/images/puzzle/bungtomo.jpg' },
+                { src: 'assets/images/puzzle/hatta.jpg' },
+                { src: 'assets/images/puzzle/yani.jpg' },
+                { src: 'assets/images/puzzle/reog.jpg' },
+                { src: 'assets/images/puzzle/saman.jpg' },
             ];
 
             $(function () {
@@ -93,11 +110,11 @@
             });
 
             function rules() {
-                alert('Susunlah Gambar yang terpecah tersebut menjadi gambar yang utuh - MASGARA - 2021');
+                alert('Susunlah Gambar yang terpecah tersebut menjadi gambar yang utuh');
             }
 
             function Tentang() {
-                alert('Di buat oleh MASGARA - 2021');
+                alert('Dibuat oleh MASGARA - 2021');
             }
         </script>
     </div>
