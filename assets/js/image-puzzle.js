@@ -71,7 +71,7 @@ var imagePuzzle = {
         var image = images[Math.floor(Math.random() * images.length)];
         $('#imgTitle').html(image.title);
         $('#actualImage').attr('src', image.src);
-        $('#actualImagePopUp').attr('src', image.src.substring(0, 7)+image.src.substring(7));
+        $('#actualImagePopUp').attr('src', image.src.substring(0, 7)+'popup'+image.src.substring(7));
         $('#sortable').empty();
         for (var i = 0; i < gridSize * gridSize; i++) {
             var xpos = (percentage * (i % gridSize)) + '%';
