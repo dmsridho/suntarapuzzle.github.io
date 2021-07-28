@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SUSUN NUSANTARA PUZZLE GAME</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<link rel="icon" href="gambar/icon.png">
+</head>
+
+<body>
+	<section class="bubble"></section>
+	<section class="banner">
+		<div class="container">
+			<div id="scene">
+				<h2 id="text">
+
+				</h2>
+				<div class="layer" data-depth="0.25">
+					<img src="gambar/gmb 1.png">
+				</div>
+				<div class="layer zInx" data-depth="0.25">
+					<img src="gambar/gmb 2.png">
+				</div>
+				<div class="layer" data-depth="0.25">
+					<img src="gambar/gmb 3.png">
+				</div>
+			</div>
+			<div class="ftombol" style="margin-top: -10px; margin-bottom: 10px; cursor: pointer; ">
+				<div class="tombol" onclick="setInterval(createBubble, 50);">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<a style="text-decoration: none;" href="index/puzzle.html">
+						<h3>Ayo_Bermain</h3>
+					</a>
+				</div>
+			</div>
+
+			<div id="ptombol" class="ftombol" style="margin-top: 5px; cursor: pointer; ">
+				<div class="tombol" onclick="setInterval(createBubble, 50);">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<h3 data-toggle="modal" data-target="#exampleModalCenter">Petunjuk</h3>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script type="text/javascript">
+		var text = document.getElementById('text');
+		var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(text);
+		var parallaxInstance = new Parallax(scene);
+
+		function createBubble() {
+			const section = document.querySelector('section')
+			const createElement = document.createElement('span')
+			var size = Math.random() * 60;
+
+			createElement.style.width = 20 + size + 'px';
+			createElement.style.height = 20 + size + 'px';
+			createElement.style.left = Math.random() * innerWidth + 'px';
+			section.appendChild(createElement);
+
+			setTimeout(() => {
+				createElement.remove()
+			}, 4000)
+		}
+		// setInterval(createBubble, 50);
+	</script>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 style="color: black; font-weight: bold;" class="modal-title" id="exampleModalLongTitle">Petunjuk
+						Permainan</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p style="color: black; font-weight: bold; font-size: medium;">
+						Halo Teman, Nama aku Tara.<br> Aku mau jelasin nih Susun Nusantara Puzzle Game itu apasih?
+						
+						<br><br>Jadiii... Susun Nusantara Puzzle Game merupakan sebuah Permaian Puzzle yang
+						mengangkat Tema Sejarah dan Kebudayaan Indonesia. Cara memainkan game ini cukup mudah,
+						Teman-teman diharuskan untuk menyusun Puzzle ke dalam bentuk yang benar. Di
+						dalam Permainan terdapat beberapa jenis level.
+						<br><p style="color: black; font-weight: bold; font-size: medium;" >1. Level Mudah : Puzzle dengan ukuran 3x3,
+						 <br>2. Level Sedang : Puzzle dengan ukuran 4x4, 
+						 <br>3. Level Sulit : Puzzle dengan ukuran 5x5.
+						<br><br>Selamat Bermain! Salam Nusantara :D</p>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		body {
+			background-image: url("gambar/bg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	</style>
+
+</body>
+
+</html>
