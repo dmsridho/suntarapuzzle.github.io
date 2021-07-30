@@ -1,3 +1,3 @@
 # SUNTARA 
 
-### bikin readme cok biar org2 ngerti
+### [demo](https://suntara.vercel.app)
